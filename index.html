@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pallipattu Mounika • Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --panel:#131318;
+      --text:#e8e8ea;
+      --muted:#a7a7b0;
+      --accent:#d90166;
+      --line:#24242b;
+      --card:#16161d;
+      --link:#5aa9ff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--link);text-decoration:none}
+    a:hover{opacity:.9}
+    .container{max-width:1100px;margin:auto;padding:0 20px}
+    /* header / nav */
+    header{
+      position:sticky;top:0;z-index:30;
+      backdrop-filter:saturate(140%) blur(8px);
+      background:linear-gradient(180deg,rgba(0,0,0,.65),rgba(0,0,0,.35));
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:16px 0;
+    }
+    .brand{font-weight:800;letter-spacing:.5px}
+    .brand span{color:var(--accent)}
+    .links a{margin-left:20px;font-weight:600;color:var(--text)}
+    .links a:hover{color:var(--accent)}
+    /* hero */
+    .hero{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:28px;
+      padding:60px 0 30px;border-bottom:1px solid var(--line)
+    }
+    .hero h1.name{
+      font-size:50px;   /* big font for name */
+      font-weight:800;
+      margin:.2rem 0;
+      color:#fff;
+    }
+    .hero h2.role{
+      font-size:36px;   /* big font for role */
+      font-weight:700;
+      color:var(--accent);
+      margin:.3rem 0;
+    }
+    .lead{
+      font-size:16px;   /* small font for description */
+      color:#d9d9df;
+      opacity:.9;
+      margin-top:10px;
+      line-height:1.5;
+    }
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      border:1px solid var(--accent);color:#fff;background:var(--accent);
+      padding:12px 18px;border-radius:12px;font-weight:700
+    }
+    .btn.secondary{background:transparent;color:var(--text);border-color:var(--line)}
+    .portrait{
+      border-radius:16px;overflow:hidden;background:var(--panel);
+      border:1px solid var(--line)
+    }
+    .portrait img{
+      display:block;
+      width:100%;
+      max-height:400px;   /* controlled height */
+      object-fit:cover;
+      border-radius:16px;
+    }
+    /* sections */
+    section{padding:50px 0;border-bottom:1px solid var(--line)}
+    h2{font-size:28px;margin:0 0 18px;color:#fff}
+    .about-card{
+      background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px
+    }
+    .list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+    .item{
+      background:var(--card);border:1px solid var(--line);
+      padding:16px;border-radius:12px
+    }
+    .item b{color:#fff}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .contact p{margin:8px 0;color:var(--text)}
+    .contact i{width:22px}
+    footer{padding:28px 0;text-align:center;color:var(--muted)}
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .links{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Pallipattu <span>Mounika</span></div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" aria-label="intro">
+      <div>
+        <h1 class="name">Pallipattu Mounika</h1>
+        <h2 class="role">Python Full Stack Developer</h2>
+        <p class="lead">
+          Building clean, responsive web apps with Django, HTML, CSS & JavaScript.
+          Passionate about problem solving, designing smooth user experiences, and writing efficient code.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#contact"><i class="fa-solid fa-paper-plane"></i>Hire Me</a>
+          <a class="btn secondary" href="mailto:pallipattumounika18@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+        </div>
+      </div>
+      <div class="portrait"><img src="joshpic.jpg" alt="Pallipattu Mounika portrait"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-label="about me">
+      <h2>About Me</h2>
+      <div class="about-card">
+        <p>
+          I'm <b>Pallipattu Mounika</b>, a Python Full Stack Developer who loves turning ideas into
+          elegant, responsive web experiences. I focus on clean code, accessibility, and performance.
+          Quick learner, team player, and always curious.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="grid-2">
+        <ul class="list">
+          <li class="item"><b>Frontend:</b> HTML5, CSS3, JavaScript (ES6), jQuery, Bootstrap</li>
+          <li class="item"><b>Backend:</b> Django</li>
+          <li class="item"><b>Languages:</b> Python, Core Java</li>
+        </ul>
+        <ul class="list">
+          <li class="item"><b>Databases:</b> SQL, NoSQL</li>
+          <li class="item"><b>Tools & IDEs:</b> Git, GitHub, VS Code</li>
+          <li class="item"><b>Strengths:</b> Positive attitude, Adaptable, Quick learner, Team player, Strong communication</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="list">
+        <li class="item"><b>Pizza Website:</b> Static website using HTML, CSS & JavaScript to simulate ordering.</li>
+        <li class="item"><b>Solar System Simulation:</b> Interactive visualization using HTML, CSS & JavaScript.</li>
+        <li class="item"><b>Heart Disease Prediction & Weather App:</b> Django app combining prediction and live weather data.</li>
+        <li class="item"><b>House Price Prediction:</b> Regression ML model with Scikit-learn, Pandas.</li>
+      </ul>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="list">
+        <li class="item"><b>B.Tech (Information Technology)</b> — SV Engineering College, Tirupati (2025) • 73%</li>
+        <li class="item"><b>Intermediate (MPC)</b> — Sri Chaitanya Junior College (2021) • 79.4%</li>
+        <li class="item"><b>SSC</b> — Sri Chaitanya Techno School (2019) • GPA 9.8</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:pallipattumounika18@gmail.com">pallipattumounika18@gmail.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> +91 7671848808</p>
+      <p><i class="fa-brands fa-linkedin"></i> <a target="_blank" href="https://www.linkedin.com/in/pallipattu-mounika728307263">LinkedIn</a></p>
+      <p><i class="fa-brands fa-github"></i> <a target="_blank" href="https://github.com/pallipattumounika18">GitHub</a></p>
+      <p><i class="fa-solid fa-globe"></i> <a target="_blank" href="https://pallipattumounika18.github.io/newportfolio/">Old Portfolio</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Pallipattu Mounika • Made with ❤️ in a dark theme
+  </footer>
+</body>
+</html>
